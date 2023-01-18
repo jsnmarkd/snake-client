@@ -26,20 +26,17 @@ const handleUserInput = function (key) {
     interval = setInterval(() => {
       connection.write("Move: left");
     }, 50);
-      // connection.write("Move: left");
   }
   if (key === 's') {
     interval = setInterval(() => {
       connection.write("Move: down");
     }, 70);
-      // connection.write("Move: down");
   }
   if (key === 'd') {
     interval = setInterval(() => {
       connection.write("Move: right");
     }, 50);
-      // connection.write("Move: right");
-    }
+  }
   if (key === 'f') {
     connection.write("Say: GG");
   }
