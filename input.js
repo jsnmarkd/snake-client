@@ -14,16 +14,19 @@ const handleUserInput = function (key) {
     process.exit();
   }
   if (key === 'w') {
-      connection.write("Move: up")
+      connection.write("Move: up");
   }
   if (key === 'a') {
-      connection.write("Move: left")
+      connection.write("Move: left");
   }
   if (key === 's') {
-      connection.write("Move: down")
+      connection.write("Move: down");
   }
   if (key === 'd') {
-      connection.write("Move: right")
+      connection.write("Move: right");
+    }
+  if (key === 'f') {  
+    connection.write("Say: GG");
   }
 };
 
