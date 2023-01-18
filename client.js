@@ -11,7 +11,20 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server."); // code that does something when the connection is first established
     conn.write("Name: JSN");
+    setInterval(() => {
+      conn.write("Move: up");
+    }, 50)
+    setInterval(() => {
+      conn.write("Move: left");
+    }, 50);
+    setInterval(() => {
+      conn.write("Move: up");
+    }, 50);
+    setInterval(() => {
+      conn.write("Move: right");
+    }, 50);
   });
+  
 
   conn.on("data", (data) => {
     console.log("Server says:", data);
@@ -21,3 +34,10 @@ const connect = function () {
 };
 
 module.exports = connect;
+
+// RULES
+
+// "Move: up" - move up one square(unless facing down)
+// "Move: down" - move down one square(unless facing up)
+// "Move: left" - move left one square(unless facing right)
+// "Move: right" - move left one square(unless facing left)
