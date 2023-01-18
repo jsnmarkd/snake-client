@@ -11,18 +11,6 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server."); // code that does something when the connection is first established
     conn.write("Name: JSN");
-    setInterval(() => {
-      conn.write("Move: up");
-    }, 50)
-    setInterval(() => {
-      conn.write("Move: left");
-    }, 50);
-    setInterval(() => {
-      conn.write("Move: up");
-    }, 50);
-    setInterval(() => {
-      conn.write("Move: right");
-    }, 50);
   });
   
 
