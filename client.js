@@ -9,7 +9,8 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
-    console.log("Connected to server."); // code that does something when the connection is first established
+    console.log("Successfully connected to game server."); // code that does something when the connection is first established
+    conn.write("Name: JSN");
   });
 
   conn.on("data", (data) => {
