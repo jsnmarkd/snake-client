@@ -38,7 +38,7 @@ const handleUserInput = function (key) {
     }, 50);
   }
   if (key === 'f') {
-    connection.write("Say: GG");
+    connection.write("Say: GG y server bugged");
   }
 };
 
